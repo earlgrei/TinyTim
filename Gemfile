@@ -35,9 +35,6 @@ gem 'jquery-rails'
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
-# Use unicorn as the app server
-gem 'unicorn'
-
 # Deploy with Capistrano
 # gem 'capistrano'
 
@@ -82,6 +79,9 @@ group :development do
   gem "rack-livereload"
   gem "guard-bundler"
   gem "guard-test"
+
+  # Use unicorn as the app server
+  gem 'unicorn'
   gem "guard-cucumber"
   gem "guard-redis"
   gem "guard-resque"
