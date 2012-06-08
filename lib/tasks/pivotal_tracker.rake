@@ -1,5 +1,5 @@
 require "rubygems"
-require "pivotal-tracker"
+require "pivotal-tracker" if Rails.env == "development"
 namespace :pt do
 
   desc "list avail pivotal tracker tix from which to create a git fea branch"
