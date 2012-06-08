@@ -1,0 +1,21 @@
+bundler_args: --without development
+before_script:
+  - "cp config/database.yml.example config/database.yml"
+  - "bundle exec rake db:migrate"
+rvm:
+  - 1.9.3
+  - jruby-19mode
+  - rbx-19mode
+notifications:
+  email:
+    - adhlssu07@gmail.com
+  irc:
+    use_notice: true
+    skip_join: true
+    channels:
+      - "irc.freenode.org#gbrug"
+
+matrix:
+  allow_failures:
+    - rvm: jruby-19mode
+    - rvm: rbx-19mode
